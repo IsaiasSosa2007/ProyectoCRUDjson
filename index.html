@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/estilos.CSS" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <h2>Datos del Cliente</h2>
+      <!--*******************************************************************************************************-->
+      <!--//***********DATOS DEL CLIENTE***********//-->
+      <form action="">
+        <label for="clienteInDni">DNI</label>
+        <input type="text" id="clienteInDni" />
+
+        <label for="clienteInNombre">Nombre/s</label>
+        <input type="text" id="clienteInNombre" />
+
+        <label for="clienteInApellido">Apellido/s</label>
+        <input type="text" id="clienteInApellido" />
+
+        <label for="clienteInDireccion">Direccion</label>
+        <input type="text" id="clienteInDireccion" />
+
+        <label for="clienteInRS">Razon Social</label>
+        <input type="text" id="clienteInRS" />
+
+        <label for="clienteInRuc">RUC</label>
+        <input type="text" id="clienteInRuc" />
+      </form>
+      <button id="btnIngresarDatosCliente">INGRESAR</button>
+
+      <!--*******************************************************************************************************-->
+      <!--//**********DATOS DEL VIAJE************//-->
+      <form action="">
+        <label for="inDestino">Destino</label>
+        <input type="text" id="inDestino" />
+
+        <label for="inFecha">Fecha de viaje</label>
+        <input type="text" id="inFecha" />
+      </form>
+      <button id="btnIngresarFechaViaje">INGRESAR</button>
+
+      <!--*******************************************************************************************************-->
+      <!--//***********DATOS DEL EMPLEADO***********//-->
+      <form action="">
+        <label for="empleadoInDni">DNI Empleado</label>
+        <input type="text" id="empleadoInDni" />
+
+        <label for="empleadoInNombre">Nombre Empleado</label>
+        <input type="text" id="empleadoInNombre" />
+
+        <label for="empleadoInApellido">Apellido Empleado</label>
+        <input type="text" id="empleadoInApellido" />
+      </form>
+      <button id="btnIngresarDatosEmpleado">INGRESAR</button>
+      <!--
+      [Número de boleto]
+      [Fecha emisión]
+      [Fecha viaje]
+      [Hora viaje]
+      [Asiento]
+      [Origen]
+      [Destino]
+      [Valor]
+      -->
+      <script src="./JS/script.JS"></script>
+      <!-- <script src="./JS/funciones.js"></script> -->
+    </div>
+  </body>
+</html>
