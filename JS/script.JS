@@ -61,7 +61,7 @@ const mesesDelAnio = [
 //<!--*****************************************DECLARACION ARRAYS DE DATOS A MOSTRAR**************************************************************-->
 //array con los datos del cliente
 let cliente = [];
-//let empleado = [];
+let empleado = [];
 //array con los datos que se terminaran usando para mostrar el boleto
 let boletoFinal = [];
 //array para guardar los datos del boleto, cliente y empleado, asi poder agregarle cosas y no tener problemas cpn el array final
@@ -102,6 +102,25 @@ document
     let destino = "cordoba";
     let valor = 3000;
 
+    if (cliente.length == 0) {
+      let listaClientes = document.getElementById("listaClientes");
+      let option = document.createElement("option");
+      option.value = `${nombre} ${apellido}`;
+      option.textContent = `${nombre} ${apellido}`;
+      listaClientes.appendChild(option);
+    } else if (
+      `${nombre.toUpperCase()} ${apellido.toUpperCase()}` !=
+      `${cliente[i - 1].nombres.toUpperCase()} ${cliente[i - 1].apellidos.toUpperCase()}`
+    ) {
+      let listaClientes = document.getElementById("listaClientes");
+      let option = document.createElement("option");
+      option.value = `${nombre} ${apellido}`;
+      option.textContent = `${nombre} ${apellido}`;
+      listaClientes.appendChild(option);
+    } else {
+      console.log("Cliente ingresado es el mismo que el anterior");
+    }
+
     //Ingresa objeto al array cliente
     cliente.push({
       dni: dni,
@@ -141,9 +160,9 @@ document
   });
 //<!--*******************************************************************************************************-->
 //<!--**********************************FUNCION BOTON BOLETO*********************************************************************-->
-document
-  .getElementById("bntIngresarFechaViaje")
-  .addEventListener("click", () => {});
+// document
+//   .getElementById("bntIngresarFechaViaje")
+//   .addEventListener("click", () => {});
 
 //<!--*******************************************************************************************************-->
 //<!--************************************FUNCION BOTON EMPLEADO*******************************************************************-->
@@ -153,4 +172,11 @@ document
     let empleadoDni = document.getElementById("empleadoInDni").value;
     let empleadoNombre = document.getElementById("empleadoInNombre").value;
     let empleadoApellido = document.getElementById("empleadoInApellido").value;
+
+    empleado.push({
+      DNI: empleadoDni,
+      nombre: empleadoNombre,
+      apellido: empleadoApellido,
+    });
+    console.log(empleado);
   });

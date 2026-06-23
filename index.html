@@ -8,6 +8,21 @@
   </head>
   <body>
     <div class="contenedor">
+      <header>
+        <div class="divLogo">
+          <img src="Gemini_Generated_Image_bings9bings9bing.png" alt="" />
+        </div>
+        <h1>Agencia de transporte</h1>
+      </header>
+      <nav>
+        <div><a href="#section">Inicio</a></div>
+        <div><a href="">Pasajero</a></div>
+        <div><a href="">Empleado</a></div>
+        <div><a href="">Boleto</a></div>
+      </nav>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="contenedor2">
       <h2>Datos del Cliente</h2>
       <!--*******************************************************************************************************-->
       <!--//***********DATOS DEL CLIENTE***********//-->
@@ -35,11 +50,29 @@
       <!--*******************************************************************************************************-->
       <!--//**********DATOS DEL VIAJE************//-->
       <form action="">
-        <label for="inDestino">Destino</label>
-        <input type="text" id="inDestino" />
+        <label for="inDestino">Seleccione el destino</label>
+        <input list="listaDestinos" type="text" id="inDestino" />
 
-        <label for="inFecha">Fecha de viaje</label>
-        <input type="text" id="inFecha" />
+        <label for="inFechaMes">Mes de viaje</label>
+        <input
+          list="listaFechaMes"
+          type="number"
+          id="inFechaMes"
+          min="0"
+          max="11"
+        />
+
+        <label for="inFechaDia">Dia de viaje</label>
+        <input
+          type="number"
+          placeholder="Ingrese el dia en numeros"
+          id="inFechaDia"
+          min="1"
+          max="28"
+        />
+
+        <label for="inHora">Hora de viaje</label>
+        <input list="listaFechaHora" type="text" id="inHora" />
       </form>
       <button id="btnIngresarFechaViaje">INGRESAR</button>
 
@@ -66,6 +99,37 @@
       [Destino]
       [Valor]
       -->
+      <datalist id="listaClientes"> </datalist>
+      <datalist id="listaEmpleados"></datalist>
+      <datalist id="listaDestinos">
+        <option value="Mar del Plata">Mar del Plata</option>
+        <option value="Tandil">Tandil</option>
+        <option value="Córdoba">Córdoba</option>
+        <option value="Bariloche">Bariloche</option>
+        <option value="Salta">Salta</option>
+        <option value="Mendoza">Mendoza</option>
+      </datalist>
+      <datalist id="listaFechaMes">
+        <option value="0">Enero</option>
+        <option value="1">Febrero</option>
+        <option value="2">Marzo</option>
+        <option value="3">Abril</option>
+        <option value="4">Mayo</option>
+        <option value="5">Junio</option>
+        <option value="6">Julio</option>
+        <option value="7">Agosto</option>
+        <option value="8">Septiembre</option>
+        <option value="9">Octubre</option>
+        <option value="10">Noviembre</option>
+        <option value="11">Diciembre</option>
+      </datalist>
+      <datalist id="listaFechaHora">
+        <option value="10">09:00 hs (Mañana)</option>
+        <option value="14">13:00 hs (Mediodía)</option>
+        <option value="18">17:00 hs (Tarde)</option>
+        <option value="22">21:00 hs (Noche)</option>
+      </datalist>
+      <section id="section"></section>
       <script src="./JS/script.JS"></script>
       <!-- <script src="./JS/funciones.js"></script> -->
     </div>
